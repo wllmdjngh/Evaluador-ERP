@@ -37,18 +37,18 @@ body{font-family:'Segoe UI',Arial,sans-serif;background:var(--gray-l);color:#585
 a{color:var(--teal)}
 
 /* ── HEADER ─────────────────────────────────────────────────────── */
-.hdr{background:#336666;padding:13px 24px;display:flex;align-items:center;gap:14px;
-  position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.hdr img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.hdr{display:none}
 .hdr-logo{display:none}
-.hdr-sub{color:#fff;font-size:16px;font-weight:800;margin-top:1px;letter-spacing:.2px}
-.hdr-right{margin-left:auto;color:rgba(255,255,255,.55);font-size:12px;text-align:right}
+.hdr-sub{display:none}
+.hdr-right{display:none}
 
 /* ── PROGRESS ───────────────────────────────────────────────────── */
-.prog{background:#336666;padding:4px 24px 12px;display:flex;align-items:flex-end;gap:24px}
+.prog{background:#336666;padding:6px 24px 10px;display:flex;align-items:center;gap:24px;
+  position:sticky;top:0;z-index:200;box-shadow:0 2px 8px rgba(0,0,0,.2)}
 .prog-lbl-wrap{flex:1}
 .prog-step{color:rgba(255,255,255,.6);font-size:11px;font-weight:600;letter-spacing:.3px;margin-bottom:1px}
-.prog-lbl{color:rgba(255,255,255,.95);font-size:13px;font-weight:700;margin-bottom:5px}
+.prog-lbl{color:rgba(255,255,255,.95);font-size:13px;font-weight:700;margin-bottom:4px}
+.prog-title{color:rgba(255,255,255,.7);font-size:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
 .prog-track{height:3px;background:rgba(255,255,255,.2);border-radius:2px}
 .prog-fill{height:100%;background:rgba(255,255,255,.8);border-radius:2px;transition:width .4s}
 
@@ -129,12 +129,12 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
 .eval-tbl{width:100%;border-collapse:collapse;table-layout:fixed}
 
 /* Columna de criterio (sticky izquierda) */
-.eval-tbl .col-crit{width:240px;min-width:200px}
+.eval-tbl .col-crit{width:320px;min-width:300px}
 /* Columnas ERP */
-.eval-tbl .col-erp{min-width:180px}
+.eval-tbl .col-erp{min-width:140px}
 
 /* Header de la tabla */
-.eval-tbl thead tr th{padding:14px 16px;font-size:12px;font-weight:800;text-align:center;
+.eval-tbl thead tr th{padding:10px 12px;font-size:12px;font-weight:800;text-align:center;
   letter-spacing:.3px;border-right:1px solid rgba(255,255,255,.15)}
 .eval-tbl thead tr th.col-crit{
   background:#58595B;color:#fff;text-align:left;
@@ -160,16 +160,16 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
   border-right:2px solid #EEE}
 .eval-tbl tbody tr:nth-child(even) td.crit-cell{background:#FAFAFA}
 .eval-tbl tbody tr:hover td.crit-cell{background:#F2F8F8}
-.crit-name{font-size:14px;font-weight:700;color:var(--navy);margin-bottom:3px}
-.crit-desc{font-size:12px;color:var(--gray);line-height:1.4;margin-bottom:6px}
+.crit-name{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.crit-desc{font-size:11px;color:var(--gray);line-height:1.35;margin-bottom:4px}
 .crit-pts-badge{display:inline-block;background:var(--teal-l);color:var(--teal-d);
   font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px}
 
 /* Celda de puntaje */
-.eval-tbl td.score-cell{padding:10px 8px;text-align:center;vertical-align:middle;border-right:1px solid #EEE}
-.score-btns{display:flex;gap:3px;justify-content:center;flex-wrap:wrap;margin-bottom:4px}
-.sbtn{width:28px;height:28px;border:2px solid #DDD;border-radius:6px;background:#fff;
-  cursor:pointer;font-size:11px;font-weight:700;color:#BBB;
+.eval-tbl td.score-cell{padding:8px 6px;text-align:center;vertical-align:middle;border-right:1px solid #EEE}
+.score-btns{display:flex;gap:2px;justify-content:center;flex-wrap:wrap;margin-bottom:3px}
+.sbtn{width:26px;height:26px;border:2px solid #DDD;border-radius:5px;background:#fff;
+  cursor:pointer;font-size:10px;font-weight:700;color:#BBB;
   transition:all .12s;display:flex;align-items:center;justify-content:center}
 .sbtn:hover{border-color:var(--teal);color:var(--teal)}
 /* activos por columna ERP */
@@ -262,7 +262,6 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
     <div class="hdr-logo">DJCS</div>
     <div class="hdr-sub">Evaluador ERP Venezuela 2026</div>
   </div>
-  <div class="hdr-right no-print"> </div>
 </div>
 <div class="prog no-print">
   <div class="prog-lbl-wrap">
@@ -270,6 +269,7 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--teal)}
     <div class="prog-lbl" id="prog-lbl">Bienvenida</div>
     <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:4%"></div></div>
   </div>
+  <div class="prog-title no-print">Evaluador ERP Venezuela 2026</div>
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════
